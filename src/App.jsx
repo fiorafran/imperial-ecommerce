@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React,{ useState } from 'react'
+import NavBar from './components/NavBar'
+import styled from './styles'
 
 function App() {
   const [count, setCount] = useState(0)
