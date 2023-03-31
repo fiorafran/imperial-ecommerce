@@ -1,7 +1,22 @@
 import mongoose from "mongoose";
+import { readFileSync } from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
-const uri =
-  "mongodb+srv://Fiorita:Midrogasosvos1@cluster0.qpniy.mongodb.net/?retryWrites=true&w=majority";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const envFile = readFileSync(path.join(__dirname, "../.env.local"));
+const envVars = Object.fromEntries(
+  envFile
+    .toString()
+    .split("\n")
+    .map((line) => line.split("="))
+);
+
+Object.assign(process.env, envVars);
+
+const uri = `mongodb+srv://${process.env.DB_UMDB}:${process.env.DB_PW}@cluster0.qpniy.mongodb.net/?retryWrites=true&w=majority`;
 mongoose
   .connect(uri, {
     useNewUrlParser: true,
