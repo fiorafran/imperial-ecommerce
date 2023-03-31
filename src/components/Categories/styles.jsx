@@ -5,12 +5,13 @@ const CategoriesList = styled.ul`
   display: flex;
   list-style: none;
   margin: 0 3rem;
+  padding: 0;
 `;
 
 const Category = styled.li`
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   margin: 0 20px;
   font-size: 16px;
