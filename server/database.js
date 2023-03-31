@@ -16,7 +16,7 @@ const envVars = Object.fromEntries(
 
 Object.assign(process.env, envVars);
 
-const uri = `mongodb+srv://${process.env.DB_UMDB}:${process.env.DB_PW}@cluster0.qpniy.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_UMDB}:${process.env.DB_PW}${process.env.DB_PATH}/?retryWrites=true&w=majority`;
 mongoose
   .connect(uri, {
     useNewUrlParser: true,
