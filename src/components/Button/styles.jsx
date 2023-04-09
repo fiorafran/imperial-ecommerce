@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 const Button = styled.button`
-  margin: 0 10px;
+  margin: 0;
   cursor: pointer;
   min-width: 42px;
   min-height: 42px;
@@ -30,7 +30,7 @@ const Button = styled.button`
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     transform: scale(0);
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.2s ease-in-out;
   }
   :hover::before {
     transform: scale(2);

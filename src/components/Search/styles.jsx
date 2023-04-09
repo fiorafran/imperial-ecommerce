@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  margin-left: 6rem;
+  margin-left: 3rem;
 `;
 const IconWrapper = styled.div`
   position: absolute;

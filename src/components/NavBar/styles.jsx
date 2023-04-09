@@ -4,7 +4,7 @@ import { colors } from "../../utils/palette";
 const NavBar = styled.div`
   color: ${colors.white};
   background-color: ${colors.primary};
-  height: 60px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
+  max-width: 1360px;
   margin: auto;
   position: relative;
 `;
@@ -36,7 +37,18 @@ const Logo = styled.div`
 
 const ContainerButtons = styled.div`
   display: flex;
-  margin-left: 12rem;
+  margin-left: 3rem;
 `;
 
-export default { NavBar, Wrapper, Logo, ContainerButtons };
+const userImage = styled.img`
+  width: 50px;
+  border-radius: 15px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: border-radius 0.2s ease-in-out;
+  &:hover {
+    border-radius: 5px;
+  }
+`
+
+export default { NavBar, Wrapper, Logo, ContainerButtons, userImage };

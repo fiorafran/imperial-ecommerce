@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "./styles";
-import { RiShoppingCartLine, RiSunFill, RiSunLine } from "react-icons/ri";
+import { RiShoppingCartLine } from "react-icons/ri";
+import { MdOutlineContactSupport } from "react-icons/md";
+import { HiOutlineLightBulb, HiLightBulb } from "react-icons/hi";
 
 const Button = ({ icon = "", width, children, fontWeight, ...props }) => {
   const renderIcon = (name) => {
     const selectIcon = {
       cart: <RiShoppingCartLine size={25} />,
-      darkMode: <RiSunFill size={25} />,
-      lightMode: <RiSunLine size={25} />,
+      darkMode: <HiLightBulb size={25} />,
+      lightMode: <HiOutlineLightBulb size={25} />,
+      support: <MdOutlineContactSupport size={25} />,
     };
 
     return selectIcon[name] || <></>;
