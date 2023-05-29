@@ -11,7 +11,8 @@ const reviewColor = {
   variadas: "#35F7FF",
 };
 
-const CardWrapper = styled.a`
+const CardWrapper = styled.div`
+  cursor: pointer;
   text-decoration: none;
   color: ${colors.whiteAlpha60};
   border-radius: 10px;
@@ -22,11 +23,11 @@ const CardWrapper = styled.a`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
   :hover {
-    box-shadow: 0px 0px 13px 5px rgba(14, 131, 136,0.2);
-    color: ${colors.white}
+    box-shadow: 0px 0px 13px 5px rgba(14, 131, 136, 0.2);
+    color: ${colors.white};
   }
 `;
 

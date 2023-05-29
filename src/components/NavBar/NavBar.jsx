@@ -5,6 +5,8 @@ import Button from "../Button";
 import Search from "../Search";
 
 const NavBar = () => {
+  const user = false;
+
   return (
     <styled.NavBar>
       <styled.Wrapper>
@@ -16,7 +18,13 @@ const NavBar = () => {
           <Button icon="support" />
           <Button icon="cart" />
         </styled.ContainerButtons>
-        <styled.userImage src="https://i.seadn.io/gae/b91FFh2EPsExNTHHqECbEQsqDSgaBeOxYWIZfNeYdXfmBOIFPpbyB2VphB_6m_g5iu_ACtgA11X-64TsqWUtdv5x9fFzco4N7OzFYio?auto=format&w=1000"/>
+        <styled.userWrapper>
+          {user ? (
+            <Button icon="user" />
+          ) : (
+            <styled.userImage src="https://i.seadn.io/gae/b91FFh2EPsExNTHHqECbEQsqDSgaBeOxYWIZfNeYdXfmBOIFPpbyB2VphB_6m_g5iu_ACtgA11X-64TsqWUtdv5x9fFzco4N7OzFYio?auto=format&w=1000" />
+          )}
+        </styled.userWrapper>
       </styled.Wrapper>
     </styled.NavBar>
   );
