@@ -40,10 +40,14 @@ const ContainerButtons = styled.div`
   margin-left: 3rem;
 `;
 
+const userWrapper = styled.div`
+  width: 50px;
+  margin-left: 20px;
+`
+
 const userImage = styled.img`
   width: 50px;
   border-radius: 15px;
-  margin-left: 20px;
   cursor: pointer;
   transition: border-radius 0.2s ease-in-out;
   &:hover {
@@ -51,4 +55,4 @@ const userImage = styled.img`
   }
 `
 
-export default { NavBar, Wrapper, Logo, ContainerButtons, userImage };
+export default { NavBar, Wrapper, Logo, ContainerButtons, userWrapper, userImage };
