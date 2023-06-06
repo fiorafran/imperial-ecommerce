@@ -8,18 +8,6 @@ const App = () => {
   return (
     <styled.App>
       <NavBar />
-      <PageHeader
-        titleComponent={
-          <Title
-            text="Título a la izquierda"
-            level={2}
-            textAlign="right"
-            fontFamily={'Roboto'}
-            fontWeight={500}
-            fontSize={'30px'}
-          />
-        }
-      />
       <Router>
         <Route path="/login" component={Login} />
         <Route path="/" component={Content} />
