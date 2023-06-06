@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
-import PageHeader from './components/PageHeader';
-import Title from './components/Title';
-
 import styled from './styles';
 
 const App = () => {
@@ -23,7 +20,12 @@ const App = () => {
           />
         }
       />
-      <Content />
+      <Router>
+        <Route path="/login" component={Login} />
+        <Route path="/" component={Content} />
+        <Route path="/product/:id" component={Product} />
+        {/* <Route>404, Not Found!</Route> */}
+      </Router>
       <Footer />
     </styled.App>
   );
